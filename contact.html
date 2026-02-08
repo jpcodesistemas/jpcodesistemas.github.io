@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a JP Code Sistemas">
+    <title>Contato - JP Code Sistemas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .contact-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-card p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .info-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .info-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .info-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .faq {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .faq h2 {
+            color: #667eea;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #f0f4ff;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            color: #cbd5e0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-section, .faq {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JP Code Sistemas</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="apps.html">Apps</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Entre em Contato</h1>
+        <p>Estamos aqui para ajudar você</p>
+    </section>
+
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>Envie-nos um email</p>
+                <a href="mailto:dev@jpcodesistemas.com.br">dev@jpcodesistemas.com.br</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h3>Telefone/WhatsApp</h3>
+                <p>Entre em contato via ligação ou mensagem</p>
+                <a href="tel:+5531992147924">(31) 99214-7924</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Localização</h3>
+                <p>Divinópolis - MG</p>
+                <p>Brasil</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>Como Podemos Ajudar?</h2>
+            <p>A JP Code Sistemas está comprometida em fornecer o melhor suporte possível aos nossos usuários. Entre em contato conosco para:</p>
+            
+            <div class="highlight-box">
+                <p><strong>💬 Suporte Técnico</strong><br>
+                Problemas com o aplicativo, dificuldades de uso, bugs ou erros técnicos.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>🤝 Parcerias e Colaborações</strong><br>
+                Interessado em parceria, integração ou colaboração com nossos projetos.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>💡 Sugestões e Feedback</strong><br>
+                Ideias de novos recursos, melhorias ou feedback sobre nossos aplicativos.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>🔒 Privacidade e Dados</strong><br>
+                Questões sobre privacidade, proteção de dados pessoais ou exercício de direitos LGPD.</p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>📋 Informações Gerais</strong><br>
+                Qualquer outra dúvida ou informação sobre nossa empresa e serviços.</p>
+            </div>
+        </div>
+
+        <div class="faq">
+            <h2>Perguntas Frequentes</h2>
+
+            <div class="faq-item">
+                <div class="faq-question">⏱️ Qual é o tempo de resposta?</div>
+                <div class="faq-answer">
+                    Nos esforçamos para responder a todas as solicitações dentro de 24-48 horas úteis. Para questões urgentes relacionadas à segurança ou privacidade, priorizamos uma resposta mais rápida.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">🆘 Como faço para reportar um problema no aplicativo?</div>
+                <div class="faq-answer">
+                    Você pode reportar problemas técnicos diretamente pelo email dev@jpcodesistemas.com.br. Por favor, inclua detalhes como: tipo de dispositivo, versão do app, descrição do problema e prints de tela se possível.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">🔐 Como posso solicitar a exclusão dos meus dados?</div>
+                <div class="faq-answer">
+                    Você pode solicitar a exclusão de seus dados através do email dev@jpcodesistemas.com.br ou diretamente nas configurações do aplicativo. Processaremos sua solicitação dentro de 15 dias úteis, conforme estabelecido pela LGPD.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">💬 Vocês oferecem suporte por telefone?</div>
+                <div class="faq-answer">
+                    Sim! Você pode entrar em contato via WhatsApp no número (31) 99214-7924. O atendimento por telefone está disponível em horário comercial.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">🌍 Vocês têm suporte em outros idiomas?</div>
+                <div class="faq-answer">
+                    Atualmente, oferecemos suporte completo em português. Estamos trabalhando para expandir nosso atendimento para outros idiomas no futuro.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">💡 Como posso sugerir uma nova funcionalidade?</div>
+                <div class="faq-answer">
+                    Adoramos receber sugestões! Envie suas ideias para dev@jpcodesistemas.com.br com o assunto "Sugestão de Funcionalidade". Analisamos todas as sugestões cuidadosamente e muitas delas são implementadas em futuras atualizações.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">🤝 Como posso propor uma parceria?</div>
+                <div class="faq-answer">
+                    Para propostas de parceria, colaboração ou integração, entre em contato via email dev@jpcodesistemas.com.br com o assunto "Proposta de Parceria". Inclua detalhes sobre sua empresa e o tipo de colaboração que tem em mente.
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section" style="margin-top: 2rem;">
+            <h2>Horário de Atendimento</h2>
+            <p><strong>Segunda a Sexta:</strong> 9h às 18h (horário de Brasília)</p>
+            <p><strong>Finais de semana e feriados:</strong> Atendimento limitado por email</p>
+            <p style="margin-top: 1.5rem; color: #666;">
+                <em>Nota: Mensagens recebidas fora do horário de atendimento serão respondidas no próximo dia útil.</em>
+            </p>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem; border-radius: 15px; text-align: center; margin-top: 3rem;">
+            <h2 style="color: white; margin-bottom: 1rem;">Pronto para Começar?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">
+                Entre em contato conosco hoje mesmo e descubra como podemos ajudar você!
+            </p>
+            <a href="mailto:dev@jpcodesistemas.com.br" style="display: inline-block; background: white; color: #667eea; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: transform 0.3s;">
+                Enviar Email
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JP Code Sistemas</h3>
+                <p>Desenvolvimento de soluções digitais inovadoras para saúde e bem-estar.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="index.html">Início</a>
+                <a href="apps.html">Nossos Apps</a>
+                <a href="privacy.html">Política de Privacidade</a>
+                <a href="terms.html">Termos de Uso</a>
+                <a href="contact.html">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: dev@jpcodesistemas.com.br</p>
+                <p>Telefone: (31) 99214-7924</p>
+                <p>Divinópolis - MG, Brasil</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JP Code Sistemas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
