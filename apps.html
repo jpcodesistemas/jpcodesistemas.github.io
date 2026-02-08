@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os aplicativos desenvolvidos pela JP Code Sistemas">
+    <title>Nossos Apps - JP Code Sistemas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .app-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .app-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+        }
+
+        .app-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .app-content {
+            padding: 2rem;
+        }
+
+        .app-content h3 {
+            color: #667eea;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .app-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .app-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-soon {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .coming-soon h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .footer-section a {
+            color: #cbd5e0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            color: #cbd5e0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .app-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">JP Code Sistemas</div>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="apps.html">Apps</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Nossos Aplicativos</h1>
+        <p>Soluções digitais que transformam vidas</p>
+    </section>
+
+    <div class="container">
+        <div class="app-card">
+            <div class="app-header">
+                <h2>CleanMind App</h2>
+                <span class="app-badge">Healthcare & Bem-Estar</span>
+            </div>
+            <div class="app-content">
+                <p><strong>O CleanMind foi criado para ser seu companheiro diário na recuperação do vício em pornografia e outros hábitos que você deseja superar.</strong></p>
+                <p>Com as ferramentas certas e acompanhamento constante, a mudança é possível.</p>
+
+                <h3>Principais Funcionalidades</h3>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <h4>📊 Contador de Sobriedade</h4>
+                        <p>Acompanhe seus dias limpos e celebre cada conquista em sua jornada.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>📝 Tracker Diário</h4>
+                        <p>Registre seu progresso diário e mantenha-se motivado com check-ins emocionais.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>💪 Acompanhamento de Jornada</h4>
+                        <p>Visualize seu progresso ao longo do tempo e identifique padrões.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>🎯 Gestão de Objetivos</h4>
+                        <p>Defina metas realistas e acompanhe seu crescimento pessoal.</p>
+                    </div>
+                </div>
+
+                <h3>Para Quem é Este App?</h3>
+                <p>O CleanMind é ideal para pessoas que:</p>
+                <ul>
+                    <li>Buscam superar vícios em pornografia</li>
+                    <li>Desejam melhorar sua saúde mental e bem-estar</li>
+                    <li>Querem ter controle sobre seus hábitos</li>
+                    <li>Precisam de ferramentas de acompanhamento e suporte</li>
+                    <li>Estão comprometidas com sua transformação pessoal</li>
+                </ul>
+
+                <h3>Privacidade e Segurança</h3>
+                <p>Entendemos a sensibilidade dos dados relacionados à sua jornada de recuperação. Por isso, o CleanMind:</p>
+                <ul>
+                    <li>Mantém seus dados seguros e criptografados</li>
+                    <li>Nunca compartilha suas informações pessoais</li>
+                    <li>Está em total conformidade com a LGPD</li>
+                    <li>Oferece controle total sobre seus dados</li>
+                </ul>
+
+                <h3>Status do Projeto</h3>
+                <p><strong>MVP em Desenvolvimento</strong> - Estamos trabalhando nas funcionalidades principais para lançar a primeira versão do app. Novas funcionalidades serão adicionadas com base no feedback dos usuários.</p>
+
+                <p style="margin-top: 2rem; padding: 1rem; background: #f0f4ff; border-radius: 8px; border-left: 4px solid #667eea;">
+                    <strong>🚀 Em Breve nas Lojas:</strong> O CleanMind estará disponível para download na Google Play Store e Apple App Store em breve!
+                </p>
+            </div>
+        </div>
+
+        <div class="coming-soon">
+            <h2>🚀 Mais Apps em Desenvolvimento</h2>
+            <p>Estamos trabalhando em novas soluções inovadoras. Fique atento para novidades!</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JP Code Sistemas</h3>
+                <p>Desenvolvimento de soluções digitais inovadoras para saúde e bem-estar.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <a href="index.html">Início</a>
+                <a href="apps.html">Nossos Apps</a>
+                <a href="privacy.html">Política de Privacidade</a>
+                <a href="terms.html">Termos de Uso</a>
+                <a href="contact.html">Contato</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: dev@jpcodesistemas.com.br</p>
+                <p>Telefone: (31) 99214-7924</p>
+                <p>Divinópolis - MG, Brasil</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 JP Code Sistemas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
